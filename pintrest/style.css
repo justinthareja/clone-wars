@@ -23,6 +23,7 @@ body {
 .header {
     height: 5rem;
     width: 100%;
+    min-width: 600px;
     padding: 1.5rem;
     position: fixed;
     top: 0;
@@ -34,6 +35,10 @@ body {
 .header__item {
     display: flex;
     align-items: center;
+}
+
+.header__item.logo {
+    margin-right: 3rem;
 }
 
 .logo-img {
@@ -77,6 +82,10 @@ body {
     text-decoration: underline;
 }
 
+.btn-container {
+    display: flex;
+}
+
 .header__item .btn {
     margin-right: 1rem;
 }
@@ -90,9 +99,10 @@ body {
     display: inline-block;
 
     font-weight: 700;
+    text-align: center;
+    text-decoration: none;
     background-color: grey;
     border-radius: 2rem;
-    text-decoration: none;
 }
 
 .btn--primary {
