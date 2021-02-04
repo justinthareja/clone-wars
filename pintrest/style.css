@@ -20,7 +20,7 @@ body {
     font-weight: 400;
 }
 
-.nav {
+.header {
     height: 5rem;
     width: 100%;
     padding: 1.5rem;
@@ -31,12 +31,12 @@ body {
     justify-content: space-between;
 }
 
-.header {
+.header__item {
     display: flex;
     align-items: center;
 }
 
-.logo {
+.logo-img {
     fill: var(--red);
 }
 
@@ -49,46 +49,45 @@ body {
     color: var(--red);
 }
 
-.nav-item {
-    display: flex;
-    align-items: center;
+.header__item .nav {
+    margin-right: 3rem;
 }
 
-.nav-links {
-    margin-right: 3rem;
+.nav__links {
     display: flex;
     list-style: none;
 }
 
-.nav-link {
+.nav__link {
     margin-right: 2rem;
 }
 
-.nav-link:last-of-type {
+.nav__link:last-of-type {
     margin-right: 0;
 }
 
-.nav-link a:link,
-.nav-link a:visited {
+.nav__link a:link,
+.nav__link a:visited {
     color: black;
     font-weight: 700;
     text-decoration: none;
 }
 
-.nav-link a:hover {
+.nav__link a:hover {
     text-decoration: underline;
 }
 
-.btn-container .btn {
+.header__item .btn {
     margin-right: 1rem;
 }
 
-.btn-container .btn:last-of-type {
+.header__item .btn:last-of-type {
     margin-right: 0;
 }
 
 .btn {
     padding: 0.75rem 1rem;
+    display: inline-block;
 
     font-weight: 700;
     background-color: grey;
