@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey-050: #F0F4F8;
+    --grey-100: #D9E2EC;
+    --grey-200: #BCCCDC;
+    --grey-300: #9FB3C8;
+    --grey-400: #829AB1;
+    --grey-500: #627D98;
+    --grey-600: #486581;
+    --grey-700: #334E68;
+    --grey-800: #243B53;
+    --grey-900: #102A43;
+    --fb-blue: #1877F2;
+    --fb-green: #42b72a;
+}
+
+body {
+    display: flex;
+    padding: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+      "Lucida Grande", "Segoe UI";
+    background-color: var(--grey-050);
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    width: 500px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.title {
+    height: 130px;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: var(--grey-900);
+}
+
+.right-side {
+    width: 95%;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8em;
+    margin-bottom: 1.5em;
+
+    font-size: 20px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 2px 6px 10px 2px var(--grey-100);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2em;
+    border-bottom: 1px solid var(--grey-100);
+}
+
+.input-container {
+    width: 100%;
+    height: 3.25em;
+    margin-bottom: 0.8em;
+}
+
+.input {
+    height: 100%;
+    width: 100%;
+    padding: 0 0 0 0.8em;
+
+    font-size: inherit;
+    border: 1px solid var(--grey-100);
+    border-radius: 6px;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--fb-blue);
+    box-shadow: 0 0 0 2px var(--grey-100);
+    caret-color: var(--fb-blue);
+}
+
+.input::placeholder {
+    color: var(--grey-300);
+}
+
+.button {
+    display: block;
+    width: 100%;
+    height: 2.5em;
+    margin-bottom: 0.8em;
+
+    font-size: 1.2em;
+    color: white;
+    background-color: var(--fb-blue);
+    border: none;
+    border-radius: 0.25em;
+}
+
+.button.new {
+    width: 11em;
+    background-color: var(--fb-green);
+}
+
+.button-container {
+    border-top: var(--grey-100);
+}
+
+.forgot {
+    margin-bottom: 1em;
+
+    font-size: 0.95em;
+    color: var(--fb-blue);
+    text-decoration: none;
+}
+
+p {
+    font-size: 18px;
+}
+
+@media only screen and (min-width: 900px) {
+    html {
+        height: 100%
+    }
+
+    body {
+        align-items: center;
+        min-height: 100%;
+        padding: 0 40px;
+    }
+
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+        /* align-items: center; */
+        width: 100%;
+    }
+
+    .title {
+        position: relative;
+        left: -36px;
+    }
+    .header {
+        text-align: left;
+        max-width: 400px;
+    }
+
+    .right-side {
+        width: 500px;
+    }
+}
+
+@media only screen and (min-width: 1075px) {
+    body {
+        padding: 0 60px;
+    }
+
+    .content {
+        width: 1075px;
+    }
+
+    .header {
+        max-width: 500px;
+    }
+
+    .subtitle {
+        font-size: 32px;
+    }
+}
