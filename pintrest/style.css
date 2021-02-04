@@ -25,7 +25,7 @@ body {
     width: 100%;
     min-width: 600px;
     padding: 1.5rem;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     display: flex;
@@ -49,7 +49,7 @@ body {
     margin-right: 0.25rem;
 }
 
-.title {
+.company {
     font-size: 1.25rem;
     color: var(--red);
 }
@@ -122,4 +122,32 @@ body {
 
 .btn--secondary:hover {
     background-color: var(--grey);
+}
+
+.title {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title__main,
+.title__sub {
+    display: block;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.title__main {
+    margin-bottom: 0.25rem;
+}
+
+.title__sub--green {
+    color: green;
+}
+
+.title__sub--teal {
+    color: teal;
 }
