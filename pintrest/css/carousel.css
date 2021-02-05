@@ -1,0 +1,82 @@
+.carousel {
+    --image-height: 350px;
+    --image-width: 236px;
+
+    --center-top: 32rem;
+    --step-up: 8rem;
+
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-img {
+    border-radius: 1rem;
+}
+
+.carousel-row {
+    display: flex;
+}
+
+.carousel-img-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-img {
+    height: var(--image-height);
+    width: var(--image-width);
+    margin-bottom: 1rem;
+}
+
+/* the 3 corresponds to position away from the center */
+.carousel-img-container:nth-of-type(1) {
+    position: absolute;
+    top: calc(var(--center-top) - 3 * var(--step-up)); 
+    left: calc(50% - 3 * var(--image-width)); 
+    margin-left: calc(-0.5 * var(--image-width) - 3rem);
+}
+
+.carousel-img-container:nth-of-type(2) {
+    position: absolute;
+    top: calc(var(--center-top) - 2 * var(--step-up)); 
+    left: calc(50% - 2 * var(--image-width)); 
+    margin-left: calc(-0.5 * var(--image-width) - 2rem);
+}
+
+.carousel-img-container:nth-of-type(3) {
+    position: absolute;
+    top: calc(var(--center-top) - var(--step-up)); /* subtract step-up */
+    left: calc(50% - var(--image-width)); /* add 1 image width's distance left */
+    margin-left: calc(-0.5 * var(--image-width) - 1rem); /* 1rem is the actual margin between images */
+}
+
+/* center of carousel */
+.carousel-img-container:nth-of-type(4) {
+    position: absolute;
+    top: var(--center-top);
+    left: 50%;
+    margin-left: calc(-0.5 * var(--image-width));
+}
+
+.carousel-img-container:nth-of-type(5) {
+    position: absolute;
+    top: calc(var(--center-top) - var(--step-up)); /* subtract step-up */
+    left: calc(50% + var(--image-width)); /* add 1 image width's distance right */
+    margin-left: calc(-0.5 * var(--image-width) + 1rem); /* 1rem is the actual margin between images */
+}
+
+.carousel-img-container:nth-of-type(6) {
+    position: absolute;
+    top: calc(var(--center-top) - 2 * var(--step-up));
+    left: calc(50% + 2 * var(--image-width)); 
+    margin-left: calc(-0.5 * var(--image-width) + 2rem); 
+}
+
+.carousel-img-container:nth-of-type(7) {
+    position: absolute;
+    top: calc(var(--center-top) - 3  * var(--step-up));
+    left: calc(50% + 3 * var(--image-width)); 
+    margin-left: calc(-0.5 * var(--image-width) + 3rem);
+}
+
