@@ -1,13 +1,98 @@
 .carousel {
     --image-height: 350px;
     --image-width: 236px;
-
     --center-top: 32rem;
     --step-up: 8rem;
-
+    
     height: 100vh;
     position: relative;
     overflow: hidden;
+}
+
+
+.title {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title__main,
+.title__sub {
+    display: block;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.title__main {
+    margin-bottom: 0.25rem;
+}
+
+.title__sub--green {
+    color: var(--green);
+}
+
+.title__sub--teal {
+    color: var(--teal);
+}
+
+.title__sub--orange {
+    color: var(--orange);
+}
+
+.title__sub--blue {
+    color: var(--blue);
+}
+
+.controls-container {
+    padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls {
+    display: flex;
+    list-style: none;
+}
+
+.controls__item > a {
+    height: 0.75rem;
+    width: 0.75rem;
+    margin-right: 1rem;
+    display: block;
+
+    border-radius: 1rem;
+    background-color: var(--grey);
+}
+
+.controls__item:last-of-type > a {
+    margin-right: 0;
+}
+
+.controls__item--teal > a {
+    background-color: var(--teal);
+}
+
+.controls__item--green > a {
+    background-color: var(--green);
+}
+
+.controls__item--blue > a {
+    background-color: var(--blue);
+}
+
+.controls__item--orange > a {
+    background-color: var(--orange);
+}
+
+.carousel-container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .carousel-img {

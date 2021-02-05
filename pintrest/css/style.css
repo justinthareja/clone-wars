@@ -9,8 +9,11 @@
     --red-dark: rgb(197, 3, 32);
     --grey-light: rgb(239, 239, 239);
     --grey: rgb(216, 215, 215);
+    --green: green;
+    --blue: blue;
+    --orange: orange;
+    --teal: teal;
  
-
     font-size: 16px;
 }
 
@@ -127,73 +130,4 @@ body {
 .content {
     position: relative;
     height: calc(100vh - 5rem); 
-}
-
-.title {
-    padding-top: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title__main,
-.title__sub {
-    display: block;
-    white-space: nowrap;
-    text-align: center;
-    font-size: 3.5rem;
-    font-weight: 600;
-}
-
-.title__main {
-    margin-bottom: 0.25rem;
-}
-
-.title__sub--green {
-    color: green;
-}
-
-.title__sub--teal {
-    color: teal;
-}
-
-.controls-container {
-    padding-top: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.controls {
-    display: flex;
-    list-style: none;
-}
-
-.controls__item > a {
-    height: 0.75rem;
-    width: 0.75rem;
-    margin-right: 1rem;
-    display: block;
-
-    border-radius: 1rem;
-    background-color: var(--grey);
-}
-
-.controls__item:last-of-type > a {
-    margin-right: 0;
-}
-
-.controls__item--teal > a {
-    background-color: teal;
-}
-
-.controls__item--green > a {
-    background-color: green;
-}
-
-.carousel-container {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
