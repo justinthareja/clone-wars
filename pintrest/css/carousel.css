@@ -30,6 +30,19 @@
     margin-bottom: 0.25rem;
 }
 
+.title__sub {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease-in,
+                transform 0.4s ease-in;
+    animation: slide-in 0.4s ease-out;
+}
+
+.title.is-fading .title__sub {
+    opacity: 0;
+    transform: translateY(-24px);
+}
+
 .title__sub--green {
     color: var(--green);
 }
@@ -165,3 +178,14 @@
     margin-left: calc(-0.5 * var(--image-width) + 3rem);
 }
 
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(24px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

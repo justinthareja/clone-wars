@@ -1,5 +1,5 @@
 var Carousel = (function() {
-    var $content;
+    var $title, $controls, $carousel;
     var numColumns = 7;
     var currentThemeIndex = 0;
     var themes = [
@@ -30,11 +30,17 @@ var Carousel = (function() {
     ];
 
     function init() {
-        $content = document.querySelector(".js-content");
+        $title = document.querySelector(".js-title");
+        $controls = document.querySelector(".js-controls");
+        $carousel = document.querySelector(".js-carousel");
 
+        $title.addEventListener("transitionend", handleTitleTransitionEnd);
         render();
+    }
 
-        setInterval(next, 3000);
+    function handleTitleTransitionEnd(event) {
+        $title.classList.toggle("is-fading");
+        $title.innerHTML = titleTemplate();
     }
 
     function getThemes() {
@@ -102,22 +108,6 @@ var Carousel = (function() {
         `);
     }
 
-    function contentTemplate(data = {}) {
-        return (`
-            <header class="title">
-                ${titleTemplate()}
-            </header>
-            <div class="controls-container">
-                ${controlsTemplate()}
-            </div>
-            <div class="carousel-container">
-                <div class="carousel js-carousel">
-                    ${carouselTemplate()}
-                </div>
-            </div>
-        `);
-    }
-
     function carouselTemplate() {
         var result = "";
 
@@ -141,8 +131,26 @@ var Carousel = (function() {
         `);
     }
 
+    function renderTitle() {
+        if ($title.innerHTML == "") {
+            $title.innerHTML = titleTemplate();
+        } else {
+            $title.classList.toggle("is-fading");
+        }
+    }
+
+    function renderControls() {
+        $controls.innerHTML = controlsTemplate();
+    }
+
+    function renderCarousel() {
+        $carousel.innerHTML = carouselTemplate();
+    }
+
     function render() {
-        $content.innerHTML = contentTemplate();
+        renderTitle();
+        renderControls();
+        renderCarousel();
     }
 
     var publicApi = {
