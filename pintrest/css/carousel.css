@@ -112,10 +112,6 @@
     border-radius: 1rem;
 }
 
-.carousel-row {
-    display: flex;
-}
-
 .carousel-img-container {
     display: flex;
     flex-direction: column;
@@ -124,6 +120,11 @@
     transition: opacity 0.4s ease-in,
                 transform 0.4s ease-in;
     animation: slide-in 0.4s ease-out;
+}
+
+.carousel-img-container.is-fading {
+    opacity: 0;
+    transform: translateY(-24px);
 }
 
 .carousel-img {
