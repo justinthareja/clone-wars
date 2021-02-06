@@ -108,16 +108,6 @@ var Carousel = (function() {
         `);
     }
 
-    function carouselTemplate() {
-        var result = "";
-
-        for (var i = 0; i < numColumns; i++) {
-            result += imageTemplate();
-        }
-
-        return result;
-    }
-
     // TODO: Themes have multiple images
     function imageTemplate() {
         var src = getCurrentTheme().image;
@@ -143,8 +133,20 @@ var Carousel = (function() {
         $controls.innerHTML = controlsTemplate();
     }
 
+
     function renderCarousel() {
-        $carousel.innerHTML = carouselTemplate();
+        $carousel.innerHTML = "";
+        
+        for (var i = 1; i <= numColumns; i++) {
+            setTimeout(function () {
+                $carousel.appendChild(parse(imageTemplate()));
+            }, i * 200);
+        }
+    }
+
+    function parse(htmlString) {
+        var doc = new DOMParser().parseFromString(htmlString, "text/html");
+        return doc.body.firstChild;
     }
 
     function render() {

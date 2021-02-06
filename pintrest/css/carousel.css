@@ -119,6 +119,11 @@
 .carousel-img-container {
     display: flex;
     flex-direction: column;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease-in,
+                transform 0.4s ease-in;
+    animation: slide-in 0.4s ease-out;
 }
 
 .carousel-img {
