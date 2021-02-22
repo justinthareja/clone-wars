@@ -1,5 +1,6 @@
 # clone-wars
-A repo dedicated to cloning popular websites all in the name of practice
+
+A repo dedicated to deliberately practicing modern web design philosophies by cloning examples from top companies such as:
 
 
 [Pinterest](https://justinthareja.github.io/clone-wars/pintrest)
