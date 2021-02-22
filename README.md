@@ -4,8 +4,8 @@ A repo dedicated to cloning popular websites all in the name of practice
 
 [Pinterest](https://justinthareja.github.io/clone-wars/pintrest)
 
-[Facebook](https://justinthareja.github.io/clone-wars/facebook/)
+[Twitter](https://justinthareja.github.io/clone-wars/twitter-login-page/)
 
-[Twitter](https://justinthareja.github.io/clone-wars/twitter/)
+[Facebook](https://justinthareja.github.io/clone-wars/facebook-landing-page/)
 
-[linkedin](https://justinthareja.github.io/clone-wars/linkedin/)
+[Google](https://justinthareja.github.io/clone-wars/google-new-tab/)
