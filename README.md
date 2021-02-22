@@ -9,4 +9,4 @@ A repo dedicated to deliberately practicing modern web design philosophies by cl
 
 [Facebook](https://justinthareja.github.io/clone-wars/facebook-landing-page/)
 
-[Google](https://justinthareja.github.io/clone-wars/google-new-tab/)
+[Google](https://justinthareja.github.io/clone-wars/google-new-tab/google-new-tab.html)
